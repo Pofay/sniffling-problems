@@ -18,6 +18,11 @@ namespace LeetcodePlayground.Basics
 
         public void Push(int x)
         {
+
+            // The idea is here is appending the pushed element
+            // unto the tail of the list
+            // [1,2] Push 3 -> [1,2,3]
+            // [1,2,3] Push 4 -> [1,2,3,4]
             if (Empty())
             {
                 stack.Push(x);
@@ -26,6 +31,7 @@ namespace LeetcodePlayground.Basics
 
             var intermediate = new Stack<int>();
             var count = stack.Count;
+
 
             for (var i = 0; i < count; i++)
             {
